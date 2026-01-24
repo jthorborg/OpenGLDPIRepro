@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio Version 17
+
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenGLDPIRepro - Standalone Plugin", "OpenGLDPIRepro_StandalonePlugin.vcxproj", "{47F702A2-2D33-F178-0190-C4CF7D358608}"
+	ProjectSection(ProjectDependencies) = postProject
+		{42F7C7C3-7B5E-1EC5-17A2-6301D0957E46} = {42F7C7C3-7B5E-1EC5-17A2-6301D0957E46}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenGLDPIRepro - VST3", "OpenGLDPIRepro_VST3.vcxproj", "{FEB33AE9-1ECA-58E2-C548-17815CE1F961}"
+	ProjectSection(ProjectDependencies) = postProject
+		{42F7C7C3-7B5E-1EC5-17A2-6301D0957E46} = {42F7C7C3-7B5E-1EC5-17A2-6301D0957E46}
+		{CAD2F8EB-9663-8E9F-7F3D-3F58C1356D44} = {CAD2F8EB-9663-8E9F-7F3D-3F58C1356D44}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenGLDPIRepro - Shared Code", "OpenGLDPIRepro_SharedCode.vcxproj", "{42F7C7C3-7B5E-1EC5-17A2-6301D0957E46}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenGLDPIRepro - VST3 Manifest Helper", "OpenGLDPIRepro_VST3ManifestHelper.vcxproj", "{CAD2F8EB-9663-8E9F-7F3D-3F58C1356D44}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FEB33AE9-1ECA-58E2-C548-17815CE1F961}.Debug|x64.ActiveCfg = Debug|x64
+		{FEB33AE9-1ECA-58E2-C548-17815CE1F961}.Debug|x64.Build.0 = Debug|x64
+		{FEB33AE9-1ECA-58E2-C548-17815CE1F961}.Release|x64.ActiveCfg = Release|x64
+		{FEB33AE9-1ECA-58E2-C548-17815CE1F961}.Release|x64.Build.0 = Release|x64
+		{47F702A2-2D33-F178-0190-C4CF7D358608}.Debug|x64.ActiveCfg = Debug|x64
+		{47F702A2-2D33-F178-0190-C4CF7D358608}.Debug|x64.Build.0 = Debug|x64
+		{47F702A2-2D33-F178-0190-C4CF7D358608}.Release|x64.ActiveCfg = Release|x64
+		{47F702A2-2D33-F178-0190-C4CF7D358608}.Release|x64.Build.0 = Release|x64
+		{42F7C7C3-7B5E-1EC5-17A2-6301D0957E46}.Debug|x64.ActiveCfg = Debug|x64
+		{42F7C7C3-7B5E-1EC5-17A2-6301D0957E46}.Debug|x64.Build.0 = Debug|x64
+		{42F7C7C3-7B5E-1EC5-17A2-6301D0957E46}.Release|x64.ActiveCfg = Release|x64
+		{42F7C7C3-7B5E-1EC5-17A2-6301D0957E46}.Release|x64.Build.0 = Release|x64
+		{CAD2F8EB-9663-8E9F-7F3D-3F58C1356D44}.Debug|x64.ActiveCfg = Debug|x64
+		{CAD2F8EB-9663-8E9F-7F3D-3F58C1356D44}.Debug|x64.Build.0 = Debug|x64
+		{CAD2F8EB-9663-8E9F-7F3D-3F58C1356D44}.Release|x64.ActiveCfg = Release|x64
+		{CAD2F8EB-9663-8E9F-7F3D-3F58C1356D44}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
