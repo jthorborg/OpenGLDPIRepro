@@ -12,6 +12,18 @@
 
 class InnerWindow : public juce::Component, public juce::OpenGLRenderer
 {
+public:
+
+    InnerWindow()
+    {
+        setOpaque(true);
+    }
+
+    void paint(juce::Graphics& g) override
+    {
+        g.fillAll(juce::Colours::red);
+    }
+
     // Inherited via OpenGLRenderer
     void newOpenGLContextCreated() override { }
     void openGLContextClosing() override {}
@@ -38,6 +50,7 @@ class InnerWindow : public juce::Component, public juce::OpenGLRenderer
 OpenGLDPIReproAudioProcessorEditor::OpenGLDPIReproAudioProcessorEditor (OpenGLDPIReproAudioProcessor& p)
     : AudioProcessorEditor (&p), audioProcessor (p), kiosk("Swap fullscreen")
 {
+    setOpaque(true);
     glWindow = std::make_unique<InnerWindow>();
 
     addAndMakeVisible(kiosk);
@@ -64,6 +77,9 @@ void OpenGLDPIReproAudioProcessorEditor::swapFullscreen()
     {
         glWindow->addKeyListener(this);
         removeChildComponent(glWindow.get());
+#if JUCE_WINDOWS
+        const juce::ScopedThreadDPIAwarenessSetter scope{ getWindowHandle() };
+#endif
         glWindow->addToDesktop(juce::ComponentPeer::StyleFlags::windowAppearsOnTaskbar);
         juce::Desktop::getInstance().setKioskModeComponent(glWindow.get());
         glWindow->setWantsKeyboardFocus(true);
